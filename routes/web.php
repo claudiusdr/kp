@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('motor/{jenis?}', function ($jenis=Sport) {
+    return 'Motor dengan jenis ' .$jenis;
 });
+
+Route::get('book/{judul}','BookController@viewJudul');
